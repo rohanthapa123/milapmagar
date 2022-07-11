@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milap Magar</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <nav class="navbar"> 
+        <div class="max-width">
+            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+            <div class="menu">
+                <ul class="menu-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">skills</a></li>
+                    <li><a href="#">Teams</a></li>
+                    <li><a href="#">Contact </a></li>
+                </ul>
+            </div>
+            
+        
+        </div>
+        <div class="container"  onclick="hello()">
+            <div class="toggleBtn" id="btns"></div>
+        </div>
+        
+    </nav>
+
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hello, My name is</div>
+                <div class="text-2">Milap Magar</div>
+                <div class="text-3">And I'm a <span>Programmer</span></div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function hello(){
+            console.log("hlo");
+            let menus = document.querySelector(".menu");
+            let bars = document.querySelector(".toggleBtn")
+            menus.classList.toggle("menu-active");
+            bars.classList.toggle("changed");
+            bars.style.before
+        }
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

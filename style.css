@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Ubuntu:wght@300;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;    
+}
+
+/* navbar stylish */
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    margin: auto;
+    font-family: 'Ubuntu' , sans-serif;
+    transition:  0.3s ease;
+}
+.container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 10%;
+    top: 45%;
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+}
+.toggleBtn{
+   position: absolute;
+    height: 4px;
+    width: 40px;
+    background-color: rgb(0, 0, 0);
+    display: none;
+    
+    
+}
+.toggleBtn::before{
+    content: "";
+    position: absolute;
+    right: 0%;
+    top: -200%;
+    height: 4px;
+    width: 40px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.25s ease-out;
+}
+.toggleBtn::after{
+    content: "";
+    position: absolute;
+    right: 0%;
+    top: 200%;
+    height: 4px;
+    width: 40px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.25s ease-out;
+    
+}
+.changed{
+    position: absolute;
+     height: 4px;
+     width: 40px;
+     background-color: rgb(0, 0, 0);
+     display: none;
+        
+ }
+ .changed::before{
+     content: "";
+     position: absolute;
+     right: 0%;
+     top: -200%;
+     height: 4px;
+     width: 40px;
+     background-color: rgb(0, 0, 0);
+     transform: rotate(45deg) translateY(5px) translateX(5px);
+     
+     
+    
+ }
+ .changed::after{
+     content: "";
+     position: absolute;
+     right: 0%;
+     top: 200%;
+     height: 4px;
+     width: 40px;
+     background-color: rgb(0, 0, 0);
+     transform: rotate(-45deg) translateY(-6px) translateX(5px);
+ }
+.max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    
+}
+
+.navbar .logo a{
+    color: blueviolet;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: rgb(23, 11, 2);
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    justify-content: space-between;
+    position: relative;
+    transition: 3s;
+}
+.navbar .menu li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    width: 70%;
+    height: 2px;
+    background-color: rgb(185, 240, 5);
+    display: none;
+    transition: 3s ease-in;
+}
+.navbar .menu li:hover::after {
+    display: block;
+    right: 0;
+
+}
+.navbar .menu li a{
+    color: rgb(11, 42, 247);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition:  0.3s ease;
+}
+.navbar .menu li a:hover{ 
+    color: rgb(53, 241, 87);
+}
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url("https://media.istockphoto.com/photos/old-wooden-planks-with-christmas-decoration-picture-id1051160216?k=20&m=1051160216&s=612x612&w=0&h=TL-F1-6dH6aRTDvGZegloPq0cSk05dTuTy3KnED69a4=") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu' , sans-serif;
+} 
+.max-width{
+    margin: auto 0 auto 40px;
+}
+.text-1{
+    font-size: 27px;
+}
+.text-2{
+    font-size: 75px;
+    font-style: 600;
+    margin-left: -3px;
+}
+.text-3{
+    font-size: 27px;
+    font-size: 40px;
+    margin: 5px 0;
+}
+.text-3 span{
+    color: crimson;
+    font-weight: 500;
+}
+/* responsive media query start */
+ @media (max-width: 947px){
+    .toggleBtn{
+        display: block;
+    }
+     .max-width{
+         padding: 0 50px;
+        }
+    .menu-btn{
+        display: block;
+        z-index: inherit\;
+    }
+    .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(213, 237, 204, 0.264);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding-top: 80px;
+    transform: translateX(100%);
+    transition: 0.5s ease-out;
+    }
+    .navbar .menu li:hover::after {
+        content: "";
+        display: none;
+        
+    }
+.navbar .menu li{
+    display: block;
+    }
+
+.navbar .menu li a{
+     display: inline-block;
+     margin: 20px 0;
+     font-size: 25px;
+    }
+ }
+.menu-active{
+    transform: translateX(0);
+
+}
