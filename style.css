@@ -5,12 +5,14 @@
     box-sizing: border-box;
     text-decoration: none;    
 }
-
+html{
+    font-size: 60.2%;
+}
 /* navbar stylish */
 .navbar{
     position: fixed;
     width: 100%;
-    padding: 30px 0;
+    padding: 3rem 0;
     margin: auto;
     font-family: 'Ubuntu' , sans-serif;
     transition:  0.3s ease;
@@ -23,13 +25,13 @@
     right: 10%;
     top: 45%;
     cursor: pointer;
-    height: 20px;
-    width: 40px;
+    height: 2rem;
+    width: 4rem;
 }
 .toggleBtn{
    position: absolute;
-    height: 4px;
-    width: 40px;
+    height: .4rem;
+    width: 4rem;
     background-color: rgb(0, 0, 0);
     display: none;
     
@@ -40,8 +42,8 @@
     position: absolute;
     right: 0%;
     top: -200%;
-    height: 4px;
-    width: 40px;
+    height: .4rem;
+    width: 4rem;
     background-color: rgb(0, 0, 0);
     transition: 0.25s ease-out;
 }
@@ -58,8 +60,8 @@
 }
 .changed{
     position: absolute;
-     height: 4px;
-     width: 40px;
+     height: .4rem;
+     width: 4rem;
      background-color: rgb(0, 0, 0);
      display: none;
         
@@ -69,10 +71,10 @@
      position: absolute;
      right: 0%;
      top: -200%;
-     height: 4px;
-     width: 40px;
+     height: .4rem;
+     width: 4rem;
      background-color: rgb(0, 0, 0);
-     transform: rotate(45deg) translateY(5px) translateX(5px);
+     transform: rotate(45deg) translateY(.5rem) translateX(.5rem);
      
      
     
@@ -82,22 +84,22 @@
      position: absolute;
      right: 0%;
      top: 200%;
-     height: 4px;
-     width: 40px;
+     height: .4rem;
+     width: 4rem;
      background-color: rgb(0, 0, 0);
-     transform: rotate(-45deg) translateY(-6px) translateX(5px);
+     transform: rotate(-45deg) translateY(-.6rem) translateX(.5rem);
  }
 .max-width{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 8rem;
     
 }
 
 .navbar .logo a{
     color: blueviolet;
-    font-size: 35px;
+    font-size: 3.5rem;
     font-weight: 600;
 }
 .navbar .logo a span{
@@ -116,7 +118,7 @@
     bottom: 0;
     right: 100%;
     width: 70%;
-    height: 2px;
+    height: .2rem;
     background-color: rgb(185, 240, 5);
     display: none;
     transition: 3s ease-in;
@@ -128,9 +130,9 @@
 }
 .navbar .menu li a{
     color: rgb(11, 42, 247);
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
-    margin-left: 25px;
+    margin-left: 2.5rem;
     transition:  0.3s ease;
 }
 .navbar .menu li a:hover{ 
@@ -139,7 +141,7 @@
 /* menu btn styling */
 .menu-btn{
     color: #fff;
-    font-size: 23px;
+    font-size: 2.3rem;
     cursor: pointer;
     display: none;
 }
@@ -152,24 +154,24 @@
     background-attachment: fixed;
     height: 100vh;
     color: #fff;
-    min-height: 500px;
+    min-height: 50remx;
     font-family: 'Ubuntu' , sans-serif;
 } 
 .max-width{
-    margin: auto 0 auto 40px;
+    margin: auto 0 auto 4rem;
 }
 .text-1{
-    font-size: 27px;
+    font-size: 2.7rem;
 }
 .text-2{
-    font-size: 75px;
+    font-size: 7.5rem;
     font-style: 600;
-    margin-left: -3px;
+    margin-left: -.3rem;
 }
 .text-3{
-    font-size: 27px;
-    font-size: 40px;
-    margin: 5px 0;
+    font-size: 2.7rem;
+    font-size: 4rem;
+    margin: .5rem 0;
 }
 .text-3 span{
     color: crimson;
@@ -177,6 +179,9 @@
 }
 /* responsive media query start */
  @media (max-width: 947px){
+    html{
+        font-size: 50%;
+    }
     .toggleBtn{
         display: block;
     }
@@ -196,7 +201,7 @@
     background: rgba(213, 237, 204, 0.264);
     backdrop-filter: blur(5px);
     text-align: center;
-    padding-top: 80px;
+    padding-top: 8rem;
     transform: translateX(100%);
     transition: 0.5s ease-out;
     }
@@ -212,10 +217,16 @@
 .navbar .menu li a{
      display: inline-block;
      margin: 20px 0;
-     font-size: 25px;
+     font-size: 2.5rem;
     }
  }
 .menu-active{
     transform: translateX(0);
 
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 45%;
+    }
 }

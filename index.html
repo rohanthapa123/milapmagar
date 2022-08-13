@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milap Magar</title>
     <link rel="stylesheet" href="style.css">
-    
-    
+
+
 </head>
+
 <body>
-    <nav class="navbar"> 
+    <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
             <div class="menu">
@@ -23,13 +25,13 @@
                     <li><a href="#">Contact </a></li>
                 </ul>
             </div>
-            
-        
+
+
         </div>
-        <div class="container"  onclick="hello()">
+        <div class="container" onclick="hello()">
             <div class="toggleBtn" id="btns"></div>
         </div>
-        
+
     </nav>
 
     <!-- home section start -->
@@ -42,9 +44,9 @@
             </div>
         </div>
     </section>
-    
+
     <script>
-        function hello(){
+        function hello() {
             console.log("hlo");
             let menus = document.querySelector(".menu");
             let bars = document.querySelector(".toggleBtn")
@@ -52,12 +54,7 @@
             bars.classList.toggle("changed");
             bars.style.before
         }
-        
-
-
-
-
-
     </script>
 </body>
+
 </html>
